@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,7 +7,12 @@ public class GridManager : MonoBehaviour
     public int width = 10;
     public int height = 10;
     public float cellSize = 1.0f;
-    public GameObject buildingPrefab;
+
+    // --- ส่วนที่แก้ไข/เพิ่มเข้ามาใหม่ ---
+    [Header("Building Settings")]
+    public BuildingData[] availableBuildings; // รายการข้อมูลตึกทั้งหมด (ลบ public GameObject buildingPrefab อันเก่าออกได้เลยค่ะ)
+    private int selectedBuildingIndex = 0;   // เก็บสถิติว่าตอนนี้เลือกตึกตัวไหนอยู่
+    // ----------------------------------
 
     public GameObject highlightPrefab;
     private GameObject highlightInstance;
@@ -112,16 +117,44 @@ public class GridManager : MonoBehaviour
         return false;
     }
 
+    // --- ฟังก์ชันนี้ถูกแก้ไขข้างในทั้งหมด ---
     void PlaceBuilding(Vector2Int pos)
     {
-        // นำ Offset มารวมในตำแหน่งสร้างสิ่งปลูกสร้าง
-        Vector3 worldPosition = new Vector3(
-            pos.x * cellSize + (cellSize / 2) + gridOffset.x, 
-            pos.y * cellSize + (cellSize / 2) + gridOffset.y, 
-            0
-        );
+        BuildingData currentData = availableBuildings[selectedBuildingIndex];
         
-        gridArray[pos.x, pos.y] = Instantiate(buildingPrefab, worldPosition, Quaternion.identity);
-        OnBuildingPlaced?.Invoke(10);
+        // ค้นหา ResourceManager เพื่อเช็คเงินก่อนสร้าง
+        ResourceManager rm = FindFirstObjectByType<ResourceManager>();
+        
+        if (rm != null && rm.gold >= currentData.cost)
+        {
+            Vector3 worldPosition = new Vector3(
+                pos.x * cellSize + (cellSize / 2) + gridOffset.x, 
+                pos.y * cellSize + (cellSize / 2) + gridOffset.y, 
+                0
+            );
+
+            // สร้างตึกจาก Prefab ที่ระบุไว้ในข้อมูลตึกชนิดนั้นๆ
+            GameObject newBuilding = Instantiate(currentData.prefab, worldPosition, Quaternion.identity);
+            
+            // ส่งค่ารายได้ (Income) ไปให้กับสคริปต์ Building ที่อยู่ในตึกนั้น
+            if (newBuilding.TryGetComponent(out Building b))
+            {
+                b.incomePerTick = currentData.incomePerTick;
+            }
+
+            // สั่งทำลายทอง/หักเงิน ตามราคากลางจริงของตึกนั้น
+            OnBuildingPlaced?.Invoke(currentData.cost);
+            gridArray[pos.x, pos.y] = newBuilding;
+        }
+        else
+        {
+            Debug.Log("เงินไม่พอสร้าง " + currentData.name);
+        }
+    }
+
+    // --- ฟังก์ชันเพิ่มเข้ามาใหม่สำหรับให้ปุ่ม UI เรียกใช้ ---
+    public void SelectBuilding(int index)
+    {
+        selectedBuildingIndex = index;
     }
 }
