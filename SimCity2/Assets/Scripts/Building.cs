@@ -14,13 +14,13 @@ public class Building : MonoBehaviour
     void OnEnable()
     {
         // เมื่อวางตึก ให้เริ่มฟังคำสั่ง Tick
-        TimeManager.OnTick += ProduceResources;
+        TimeManager.OnMonthPassed += ProduceResources;
     }
 
     void OnDisable()
     {
         // เมื่อตึกถูกลบ ให้หยุดฟัง
-        TimeManager.OnTick -= ProduceResources;
+        TimeManager.OnMonthPassed -= ProduceResources;
     }
 
     void ProduceResources()

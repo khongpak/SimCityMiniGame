@@ -1168,8 +1168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1cdd96fcf6a3cf41a621808284b6028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  moneyText: {fileID: 547374788}
+  goldText: {fileID: 547374788}
+  dateText: {fileID: 1870146353}
   resourceManager: {fileID: 56994968}
+  timeManager: {fileID: 1884788342}
 --- !u!4 &899965143
 Transform:
   m_ObjectHideFlags: 0
@@ -1592,6 +1594,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   tickInterval: 2
+  day: 1
+  month: 1
+  year: 2024
 --- !u!4 &1884788343
 Transform:
   m_ObjectHideFlags: 0

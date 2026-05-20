@@ -3,15 +3,17 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI moneyText; 
-    public ResourceManager resourceManager; 
+    public TextMeshProUGUI goldText;
+    public TextMeshProUGUI dateText; // ลาก Text อันใหม่มาใส่ที่นี่
+    public ResourceManager resourceManager;
+    public TimeManager timeManager; // ลาก TimeManager มาใส่
 
     void Update()
     {
-        // เปลี่ยนจาก currentMoney เป็น gold ตามที่คุณเพชรตั้งชื่อไว้
-        if (resourceManager != null && moneyText != null)
-        {
-            moneyText.text = "Gold: " + resourceManager.gold.ToString();
-        }
+        if (resourceManager != null && goldText != null)
+            goldText.text = "Gold: " + resourceManager.gold.ToString();
+
+        if (timeManager != null && dateText != null)
+            dateText.text = "Date: " + timeManager.GetDateString();
     }
 }
