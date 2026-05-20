@@ -1221,11 +1221,11 @@ MonoBehaviour:
   cellSize: 1
   availableBuildings:
   - name: House
-    prefab: {fileID: 2622656886907776846, guid: e75078cfe9b9ac342b8e5965599e26e0, type: 3}
+    prefab: {fileID: 3805796372515766667, guid: c17efedd43249eb4e82a04bbbddfe6be, type: 3}
     cost: 10
     incomePerTick: 5
   - name: Factory
-    prefab: {fileID: 2622656886907776846, guid: 9c8bf4adc69ad834a8b19714a3db09d4, type: 3}
+    prefab: {fileID: 6612042292080600796, guid: 5085374ffe89fc14fb5882a4e1f67947, type: 3}
     cost: 50
     incomePerTick: 20
   highlightPrefab: {fileID: 5077664610662642328, guid: 1d51b0048abfac947814e62f64051b00, type: 3}
