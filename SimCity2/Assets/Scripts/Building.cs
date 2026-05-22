@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    public int incomePerTick = 5; // ตึกนี้ผลิตเงินเท่าไหร่ต่อ 1 Tick
+    [HideInInspector]public int incomePerTick;
+    [HideInInspector]public int constructionCost;
+    
     private ResourceManager resourceManager;
 
     void Start()

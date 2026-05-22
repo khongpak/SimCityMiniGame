@@ -207,6 +207,7 @@ public class GridManager : MonoBehaviour
             if (newBuilding.TryGetComponent(out Building b))
             {
                 b.incomePerTick = currentData.incomePerTick;
+                b.constructionCost = currentData.cost;
             }
 
             // สั่งทำลายทอง/หักเงิน ตามราคากลางจริงของตึกนั้น
@@ -232,7 +233,13 @@ public class GridManager : MonoBehaviour
         // ในเกมแนวสร้างเมือง ตึกแต่ละแบบราคาไม่เท่ากัน เราต้องเช็คว่าตึกที่จะทุบราคาเท่าไหร่
         // แต่ตอนนี้เราคืนเงินแบบเหมาจ่ายครอย่างง่าย หรือถ้าจะให้ดี เราคำนวณคืนเงิน 50% ได้ค่ะ
         // เพื่อความง่ายในขั้นนี้ เราจะดึงข้อมูลราคา หรือคืนเงินให้ผู้เล่นเป็นค่าคงที่ไปก่อน เช่น คืนให้ 10 ทอง
-        int refundAmount = 10; 
+        int refundAmount = 0; 
+
+        if (buildingToDestroy.TryGetComponent(out Building b))
+        {
+            // คำนวณคืนเงิน 50% (ใช้การหาร 2)
+            refundAmount = b.constructionCost / 2; 
+        }
 
         ResourceManager rm = FindFirstObjectByType<ResourceManager>();
         if (rm != null)
