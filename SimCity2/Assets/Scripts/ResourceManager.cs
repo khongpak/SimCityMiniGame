@@ -37,4 +37,10 @@ public class ResourceManager : MonoBehaviour
         if (gold < 0) gold = 0;
     }
 
+    public void RefundGold(int amount)
+    {
+        gold += amount;
+        // หากในอนาคตมี UI แยก ตัว UIManager จะมาดึงค่านี้ไปอัปเดตเองใน Update() ค่ะ
+    }
+
 }
