@@ -761,6 +761,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -886,6 +887,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b79b50c8ae8e0e42b68f6155994d341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraController
+  moveSpeed: 10
+  zoomSpeed: 5
+  minZoom: 2
+  maxZoom: 15
 --- !u!1 &547374786
 GameObject:
   m_ObjectHideFlags: 0
@@ -8622,8 +8639,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067af283b0edf5746be63a6028fb9108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
-  width: 10
-  height: 10
+  width: 50
+  height: 50
   cellSize: 1
   availableBuildings:
   - name: House
