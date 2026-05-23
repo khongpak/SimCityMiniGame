@@ -540,7 +540,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -592,12 +592,12 @@ TextureImporter:
       name: CP_V1.0.4_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 895
-        width: 50
-        height: 98
+        x: 32
+        y: 896
+        width: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -614,12 +614,12 @@ TextureImporter:
       name: CP_V1.0.4_1
       rect:
         serializedVersion: 2
-        x: 111
-        y: 895
-        width: 50
-        height: 98
+        x: 112
+        y: 896
+        width: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -636,12 +636,12 @@ TextureImporter:
       name: CP_V1.0.4_2
       rect:
         serializedVersion: 2
-        x: 191
-        y: 895
-        width: 50
-        height: 98
+        x: 192
+        y: 896
+        width: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -658,12 +658,12 @@ TextureImporter:
       name: CP_V1.0.4_3
       rect:
         serializedVersion: 2
-        x: 271
-        y: 895
-        width: 82
-        height: 98
+        x: 272
+        y: 896
+        width: 80
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -680,12 +680,12 @@ TextureImporter:
       name: CP_V1.0.4_4
       rect:
         serializedVersion: 2
-        x: 399
-        y: 959
-        width: 34
-        height: 18
+        x: 400
+        y: 960
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -702,12 +702,12 @@ TextureImporter:
       name: CP_V1.0.4_5
       rect:
         serializedVersion: 2
-        x: 463
-        y: 959
-        width: 34
-        height: 18
+        x: 464
+        y: 960
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -724,12 +724,12 @@ TextureImporter:
       name: CP_V1.0.4_6
       rect:
         serializedVersion: 2
-        x: 511
-        y: 959
-        width: 18
-        height: 18
+        x: 512
+        y: 960
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -746,12 +746,12 @@ TextureImporter:
       name: CP_V1.0.4_7
       rect:
         serializedVersion: 2
-        x: 703
-        y: 879
-        width: 194
-        height: 114
+        x: 704
+        y: 880
+        width: 192
+        height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -768,12 +768,12 @@ TextureImporter:
       name: CP_V1.0.4_8
       rect:
         serializedVersion: 2
-        x: 412
-        y: 927
-        width: 37
-        height: 18
+        x: 413
+        y: 928
+        width: 35
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -790,12 +790,12 @@ TextureImporter:
       name: CP_V1.0.4_9
       rect:
         serializedVersion: 2
-        x: 463
-        y: 927
-        width: 18
-        height: 12
+        x: 464
+        y: 928
+        width: 16
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -812,12 +812,12 @@ TextureImporter:
       name: CP_V1.0.4_10
       rect:
         serializedVersion: 2
-        x: 495
-        y: 927
-        width: 37
-        height: 18
+        x: 496
+        y: 928
+        width: 35
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -834,12 +834,12 @@ TextureImporter:
       name: CP_V1.0.4_11
       rect:
         serializedVersion: 2
-        x: 399
-        y: 879
-        width: 18
-        height: 15
+        x: 400
+        y: 880
+        width: 16
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -856,12 +856,12 @@ TextureImporter:
       name: CP_V1.0.4_12
       rect:
         serializedVersion: 2
-        x: 431
-        y: 879
-        width: 18
-        height: 13
+        x: 432
+        y: 880
+        width: 16
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -878,12 +878,12 @@ TextureImporter:
       name: CP_V1.0.4_13
       rect:
         serializedVersion: 2
-        x: 463
-        y: 879
-        width: 18
-        height: 18
+        x: 464
+        y: 880
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -900,12 +900,12 @@ TextureImporter:
       name: CP_V1.0.4_14
       rect:
         serializedVersion: 2
-        x: 496
-        y: 879
-        width: 16
-        height: 15
+        x: 497
+        y: 880
+        width: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -922,12 +922,12 @@ TextureImporter:
       name: CP_V1.0.4_15
       rect:
         serializedVersion: 2
-        x: 15
-        y: 799
-        width: 66
-        height: 50
+        x: 16
+        y: 800
+        width: 64
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -944,12 +944,12 @@ TextureImporter:
       name: CP_V1.0.4_16
       rect:
         serializedVersion: 2
-        x: 111
-        y: 799
-        width: 50
-        height: 50
+        x: 112
+        y: 800
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -966,12 +966,12 @@ TextureImporter:
       name: CP_V1.0.4_17
       rect:
         serializedVersion: 2
-        x: 191
-        y: 799
-        width: 66
-        height: 56
+        x: 192
+        y: 800
+        width: 64
+        height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -988,12 +988,12 @@ TextureImporter:
       name: CP_V1.0.4_18
       rect:
         serializedVersion: 2
-        x: 287
-        y: 799
-        width: 50
-        height: 50
+        x: 288
+        y: 800
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1010,12 +1010,12 @@ TextureImporter:
       name: CP_V1.0.4_19
       rect:
         serializedVersion: 2
-        x: 400
-        y: 847
-        width: 16
-        height: 18
+        x: 401
+        y: 848
+        width: 14
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1032,12 +1032,12 @@ TextureImporter:
       name: CP_V1.0.4_20
       rect:
         serializedVersion: 2
-        x: 431
-        y: 847
-        width: 18
-        height: 18
+        x: 432
+        y: 848
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1054,12 +1054,12 @@ TextureImporter:
       name: CP_V1.0.4_21
       rect:
         serializedVersion: 2
-        x: 465
-        y: 847
-        width: 12
-        height: 16
+        x: 466
+        y: 848
+        width: 10
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1076,12 +1076,12 @@ TextureImporter:
       name: CP_V1.0.4_22
       rect:
         serializedVersion: 2
-        x: 495
-        y: 815
-        width: 27
-        height: 34
+        x: 496
+        y: 816
+        width: 25
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1098,12 +1098,12 @@ TextureImporter:
       name: CP_V1.0.4_23
       rect:
         serializedVersion: 2
-        x: 401
-        y: 815
-        width: 14
-        height: 18
+        x: 402
+        y: 816
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1120,12 +1120,12 @@ TextureImporter:
       name: CP_V1.0.4_24
       rect:
         serializedVersion: 2
-        x: 433
-        y: 815
-        width: 14
-        height: 18
+        x: 434
+        y: 816
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1142,12 +1142,12 @@ TextureImporter:
       name: CP_V1.0.4_25
       rect:
         serializedVersion: 2
-        x: 543
-        y: 815
-        width: 18
-        height: 25
+        x: 544
+        y: 816
+        width: 16
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1164,12 +1164,12 @@ TextureImporter:
       name: CP_V1.0.4_26
       rect:
         serializedVersion: 2
-        x: 575
-        y: 815
-        width: 18
-        height: 25
+        x: 576
+        y: 816
+        width: 16
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1186,12 +1186,12 @@ TextureImporter:
       name: CP_V1.0.4_27
       rect:
         serializedVersion: 2
-        x: 607
-        y: 815
-        width: 25
-        height: 22
+        x: 608
+        y: 816
+        width: 23
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1208,12 +1208,12 @@ TextureImporter:
       name: CP_V1.0.4_28
       rect:
         serializedVersion: 2
-        x: 703
-        y: 719
-        width: 194
-        height: 114
+        x: 704
+        y: 720
+        width: 192
+        height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1230,12 +1230,12 @@ TextureImporter:
       name: CP_V1.0.4_29
       rect:
         serializedVersion: 2
-        x: 15
-        y: 703
-        width: 66
-        height: 44
+        x: 16
+        y: 704
+        width: 64
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1252,12 +1252,12 @@ TextureImporter:
       name: CP_V1.0.4_30
       rect:
         serializedVersion: 2
-        x: 111
-        y: 703
-        width: 50
-        height: 44
+        x: 112
+        y: 704
+        width: 48
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1274,12 +1274,12 @@ TextureImporter:
       name: CP_V1.0.4_31
       rect:
         serializedVersion: 2
-        x: 207
-        y: 703
-        width: 34
-        height: 50
+        x: 208
+        y: 704
+        width: 32
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1296,12 +1296,12 @@ TextureImporter:
       name: CP_V1.0.4_32
       rect:
         serializedVersion: 2
-        x: 287
-        y: 655
-        width: 50
-        height: 98
+        x: 288
+        y: 656
+        width: 48
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1318,12 +1318,12 @@ TextureImporter:
       name: CP_V1.0.4_33
       rect:
         serializedVersion: 2
-        x: 367
-        y: 703
-        width: 50
-        height: 68
+        x: 368
+        y: 704
+        width: 48
+        height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1340,12 +1340,12 @@ TextureImporter:
       name: CP_V1.0.4_34
       rect:
         serializedVersion: 2
-        x: 431
-        y: 703
-        width: 50
-        height: 68
+        x: 432
+        y: 704
+        width: 48
+        height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1362,12 +1362,12 @@ TextureImporter:
       name: CP_V1.0.4_35
       rect:
         serializedVersion: 2
-        x: 495
-        y: 703
-        width: 50
-        height: 68
+        x: 496
+        y: 704
+        width: 48
+        height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1384,12 +1384,12 @@ TextureImporter:
       name: CP_V1.0.4_36
       rect:
         serializedVersion: 2
-        x: 16
-        y: 607
-        width: 66
-        height: 34
+        x: 17
+        y: 608
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1406,12 +1406,12 @@ TextureImporter:
       name: CP_V1.0.4_37
       rect:
         serializedVersion: 2
-        x: 128
-        y: 607
-        width: 50
-        height: 29
+        x: 129
+        y: 608
+        width: 48
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1428,12 +1428,12 @@ TextureImporter:
       name: CP_V1.0.4_38
       rect:
         serializedVersion: 2
-        x: 270
-        y: 573
-        width: 36
-        height: 52
+        x: 271
+        y: 574
+        width: 34
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1450,12 +1450,12 @@ TextureImporter:
       name: CP_V1.0.4_39
       rect:
         serializedVersion: 2
-        x: 387
-        y: 623
-        width: 10
-        height: 32
+        x: 388
+        y: 624
+        width: 8
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1472,12 +1472,12 @@ TextureImporter:
       name: CP_V1.0.4_40
       rect:
         serializedVersion: 2
-        x: 415
-        y: 623
-        width: 31
-        height: 34
+        x: 416
+        y: 624
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1494,12 +1494,12 @@ TextureImporter:
       name: CP_V1.0.4_41
       rect:
         serializedVersion: 2
-        x: 467
-        y: 623
-        width: 9
-        height: 32
+        x: 468
+        y: 624
+        width: 7
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1516,12 +1516,12 @@ TextureImporter:
       name: CP_V1.0.4_42
       rect:
         serializedVersion: 2
-        x: 499
-        y: 623
-        width: 9
-        height: 32
+        x: 500
+        y: 624
+        width: 7
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1538,12 +1538,12 @@ TextureImporter:
       name: CP_V1.0.4_43
       rect:
         serializedVersion: 2
-        x: 15
-        y: 543
-        width: 66
-        height: 34
+        x: 16
+        y: 544
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1560,12 +1560,12 @@ TextureImporter:
       name: CP_V1.0.4_44
       rect:
         serializedVersion: 2
-        x: 387
-        y: 575
-        width: 11
-        height: 34
+        x: 388
+        y: 576
+        width: 9
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1582,12 +1582,12 @@ TextureImporter:
       name: CP_V1.0.4_45
       rect:
         serializedVersion: 2
-        x: 419
-        y: 575
-        width: 26
-        height: 34
+        x: 420
+        y: 576
+        width: 24
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1604,12 +1604,12 @@ TextureImporter:
       name: CP_V1.0.4_46
       rect:
         serializedVersion: 2
-        x: 467
-        y: 575
-        width: 11
-        height: 34
+        x: 468
+        y: 576
+        width: 9
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1626,12 +1626,12 @@ TextureImporter:
       name: CP_V1.0.4_47
       rect:
         serializedVersion: 2
-        x: 498
-        y: 575
-        width: 11
-        height: 33
+        x: 499
+        y: 576
+        width: 9
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1648,12 +1648,12 @@ TextureImporter:
       name: CP_V1.0.4_48
       rect:
         serializedVersion: 2
-        x: 127
-        y: 543
-        width: 50
-        height: 29
+        x: 128
+        y: 544
+        width: 48
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1670,12 +1670,12 @@ TextureImporter:
       name: CP_V1.0.4_49
       rect:
         serializedVersion: 2
-        x: 384
-        y: 527
-        width: 16
-        height: 30
+        x: 385
+        y: 528
+        width: 14
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1692,12 +1692,12 @@ TextureImporter:
       name: CP_V1.0.4_50
       rect:
         serializedVersion: 2
-        x: 417
-        y: 527
-        width: 14
-        height: 28
+        x: 418
+        y: 528
+        width: 12
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1714,12 +1714,12 @@ TextureImporter:
       name: CP_V1.0.4_51
       rect:
         serializedVersion: 2
-        x: 449
-        y: 527
-        width: 14
-        height: 28
+        x: 450
+        y: 528
+        width: 12
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1736,12 +1736,12 @@ TextureImporter:
       name: CP_V1.0.4_52
       rect:
         serializedVersion: 2
-        x: 239
-        y: 495
-        width: 34
-        height: 47
+        x: 240
+        y: 496
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1758,12 +1758,12 @@ TextureImporter:
       name: CP_V1.0.4_53
       rect:
         serializedVersion: 2
-        x: 303
-        y: 495
-        width: 34
-        height: 47
+        x: 304
+        y: 496
+        width: 32
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1780,12 +1780,12 @@ TextureImporter:
       name: CP_V1.0.4_54
       rect:
         serializedVersion: 2
-        x: 383
-        y: 479
-        width: 18
-        height: 32
+        x: 384
+        y: 480
+        width: 16
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1802,12 +1802,12 @@ TextureImporter:
       name: CP_V1.0.4_55
       rect:
         serializedVersion: 2
-        x: 414
-        y: 479
-        width: 20
-        height: 29
+        x: 415
+        y: 480
+        width: 18
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1824,12 +1824,12 @@ TextureImporter:
       name: CP_V1.0.4_56
       rect:
         serializedVersion: 2
-        x: 15
-        y: 399
-        width: 18
-        height: 18
+        x: 16
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1846,12 +1846,12 @@ TextureImporter:
       name: CP_V1.0.4_57
       rect:
         serializedVersion: 2
-        x: 47
-        y: 399
-        width: 18
-        height: 18
+        x: 48
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1868,12 +1868,12 @@ TextureImporter:
       name: CP_V1.0.4_58
       rect:
         serializedVersion: 2
-        x: 79
-        y: 399
-        width: 18
-        height: 18
+        x: 80
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1890,12 +1890,12 @@ TextureImporter:
       name: CP_V1.0.4_59
       rect:
         serializedVersion: 2
-        x: 111
-        y: 399
-        width: 18
-        height: 18
+        x: 112
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1912,12 +1912,12 @@ TextureImporter:
       name: CP_V1.0.4_60
       rect:
         serializedVersion: 2
-        x: 143
-        y: 399
-        width: 18
-        height: 18
+        x: 144
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1934,12 +1934,12 @@ TextureImporter:
       name: CP_V1.0.4_61
       rect:
         serializedVersion: 2
-        x: 207
-        y: 399
-        width: 18
-        height: 18
+        x: 208
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1956,12 +1956,12 @@ TextureImporter:
       name: CP_V1.0.4_62
       rect:
         serializedVersion: 2
-        x: 239
-        y: 399
-        width: 18
-        height: 18
+        x: 240
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1978,12 +1978,12 @@ TextureImporter:
       name: CP_V1.0.4_63
       rect:
         serializedVersion: 2
-        x: 271
-        y: 399
-        width: 18
-        height: 18
+        x: 272
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2000,12 +2000,12 @@ TextureImporter:
       name: CP_V1.0.4_64
       rect:
         serializedVersion: 2
-        x: 303
-        y: 399
-        width: 18
-        height: 18
+        x: 304
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2022,12 +2022,12 @@ TextureImporter:
       name: CP_V1.0.4_65
       rect:
         serializedVersion: 2
-        x: 335
-        y: 399
-        width: 18
-        height: 18
+        x: 336
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2044,12 +2044,12 @@ TextureImporter:
       name: CP_V1.0.4_66
       rect:
         serializedVersion: 2
-        x: 415
-        y: 399
-        width: 18
-        height: 18
+        x: 416
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2066,12 +2066,12 @@ TextureImporter:
       name: CP_V1.0.4_67
       rect:
         serializedVersion: 2
-        x: 447
-        y: 399
-        width: 18
-        height: 18
+        x: 448
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2088,12 +2088,12 @@ TextureImporter:
       name: CP_V1.0.4_68
       rect:
         serializedVersion: 2
-        x: 479
-        y: 399
-        width: 18
-        height: 18
+        x: 480
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2110,12 +2110,12 @@ TextureImporter:
       name: CP_V1.0.4_69
       rect:
         serializedVersion: 2
-        x: 511
-        y: 399
-        width: 18
-        height: 18
+        x: 512
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2132,12 +2132,12 @@ TextureImporter:
       name: CP_V1.0.4_70
       rect:
         serializedVersion: 2
-        x: 15
-        y: 367
-        width: 18
-        height: 18
+        x: 16
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2154,12 +2154,12 @@ TextureImporter:
       name: CP_V1.0.4_71
       rect:
         serializedVersion: 2
-        x: 47
-        y: 367
-        width: 18
-        height: 18
+        x: 48
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2176,12 +2176,12 @@ TextureImporter:
       name: CP_V1.0.4_72
       rect:
         serializedVersion: 2
-        x: 79
-        y: 367
-        width: 18
-        height: 18
+        x: 80
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2198,12 +2198,12 @@ TextureImporter:
       name: CP_V1.0.4_73
       rect:
         serializedVersion: 2
-        x: 111
-        y: 367
-        width: 18
-        height: 18
+        x: 112
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2220,12 +2220,12 @@ TextureImporter:
       name: CP_V1.0.4_74
       rect:
         serializedVersion: 2
-        x: 143
-        y: 367
-        width: 18
-        height: 18
+        x: 144
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2242,12 +2242,12 @@ TextureImporter:
       name: CP_V1.0.4_75
       rect:
         serializedVersion: 2
-        x: 207
-        y: 367
-        width: 18
-        height: 18
+        x: 208
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2264,12 +2264,12 @@ TextureImporter:
       name: CP_V1.0.4_76
       rect:
         serializedVersion: 2
-        x: 239
-        y: 367
-        width: 18
-        height: 18
+        x: 240
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2286,12 +2286,12 @@ TextureImporter:
       name: CP_V1.0.4_77
       rect:
         serializedVersion: 2
-        x: 271
-        y: 367
-        width: 18
-        height: 18
+        x: 272
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2308,12 +2308,12 @@ TextureImporter:
       name: CP_V1.0.4_78
       rect:
         serializedVersion: 2
-        x: 303
-        y: 367
-        width: 18
-        height: 18
+        x: 304
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2330,12 +2330,12 @@ TextureImporter:
       name: CP_V1.0.4_79
       rect:
         serializedVersion: 2
-        x: 335
-        y: 367
-        width: 18
-        height: 18
+        x: 336
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2352,12 +2352,12 @@ TextureImporter:
       name: CP_V1.0.4_80
       rect:
         serializedVersion: 2
-        x: 415
-        y: 367
-        width: 18
-        height: 18
+        x: 416
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2374,12 +2374,12 @@ TextureImporter:
       name: CP_V1.0.4_81
       rect:
         serializedVersion: 2
-        x: 447
-        y: 367
-        width: 18
-        height: 18
+        x: 448
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2396,12 +2396,12 @@ TextureImporter:
       name: CP_V1.0.4_82
       rect:
         serializedVersion: 2
-        x: 479
-        y: 367
-        width: 18
-        height: 18
+        x: 480
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2418,12 +2418,12 @@ TextureImporter:
       name: CP_V1.0.4_83
       rect:
         serializedVersion: 2
-        x: 511
-        y: 367
-        width: 18
-        height: 18
+        x: 512
+        y: 368
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2440,12 +2440,12 @@ TextureImporter:
       name: CP_V1.0.4_84
       rect:
         serializedVersion: 2
-        x: 15
-        y: 335
-        width: 18
-        height: 18
+        x: 16
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2462,12 +2462,12 @@ TextureImporter:
       name: CP_V1.0.4_85
       rect:
         serializedVersion: 2
-        x: 47
-        y: 335
-        width: 18
-        height: 18
+        x: 48
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2484,12 +2484,12 @@ TextureImporter:
       name: CP_V1.0.4_86
       rect:
         serializedVersion: 2
-        x: 79
-        y: 335
-        width: 18
-        height: 18
+        x: 80
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2506,12 +2506,12 @@ TextureImporter:
       name: CP_V1.0.4_87
       rect:
         serializedVersion: 2
-        x: 207
-        y: 335
-        width: 18
-        height: 18
+        x: 208
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2528,12 +2528,12 @@ TextureImporter:
       name: CP_V1.0.4_88
       rect:
         serializedVersion: 2
-        x: 239
-        y: 335
-        width: 18
-        height: 18
+        x: 240
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2550,12 +2550,12 @@ TextureImporter:
       name: CP_V1.0.4_89
       rect:
         serializedVersion: 2
-        x: 271
-        y: 335
-        width: 18
-        height: 18
+        x: 272
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2572,12 +2572,12 @@ TextureImporter:
       name: CP_V1.0.4_90
       rect:
         serializedVersion: 2
-        x: 303
-        y: 335
-        width: 18
-        height: 18
+        x: 304
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2594,12 +2594,12 @@ TextureImporter:
       name: CP_V1.0.4_91
       rect:
         serializedVersion: 2
-        x: 335
-        y: 335
-        width: 18
-        height: 18
+        x: 336
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2616,12 +2616,12 @@ TextureImporter:
       name: CP_V1.0.4_92
       rect:
         serializedVersion: 2
-        x: 415
-        y: 335
-        width: 18
-        height: 18
+        x: 416
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2638,12 +2638,12 @@ TextureImporter:
       name: CP_V1.0.4_93
       rect:
         serializedVersion: 2
-        x: 447
-        y: 335
-        width: 18
-        height: 18
+        x: 448
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2660,12 +2660,12 @@ TextureImporter:
       name: CP_V1.0.4_94
       rect:
         serializedVersion: 2
-        x: 479
-        y: 335
-        width: 18
-        height: 18
+        x: 480
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2682,12 +2682,12 @@ TextureImporter:
       name: CP_V1.0.4_95
       rect:
         serializedVersion: 2
-        x: 511
-        y: 335
-        width: 18
-        height: 18
+        x: 512
+        y: 336
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2704,12 +2704,12 @@ TextureImporter:
       name: CP_V1.0.4_96
       rect:
         serializedVersion: 2
-        x: 207
-        y: 303
-        width: 18
-        height: 18
+        x: 208
+        y: 304
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2726,12 +2726,12 @@ TextureImporter:
       name: CP_V1.0.4_97
       rect:
         serializedVersion: 2
-        x: 239
-        y: 303
-        width: 18
-        height: 18
+        x: 240
+        y: 304
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2748,12 +2748,12 @@ TextureImporter:
       name: CP_V1.0.4_98
       rect:
         serializedVersion: 2
-        x: 271
-        y: 303
-        width: 18
-        height: 18
+        x: 272
+        y: 304
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2770,12 +2770,12 @@ TextureImporter:
       name: CP_V1.0.4_99
       rect:
         serializedVersion: 2
-        x: 303
-        y: 303
-        width: 18
-        height: 18
+        x: 304
+        y: 304
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2792,12 +2792,12 @@ TextureImporter:
       name: CP_V1.0.4_100
       rect:
         serializedVersion: 2
-        x: 415
-        y: 303
-        width: 18
-        height: 18
+        x: 416
+        y: 304
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2814,12 +2814,12 @@ TextureImporter:
       name: CP_V1.0.4_101
       rect:
         serializedVersion: 2
-        x: 447
-        y: 303
-        width: 18
-        height: 18
+        x: 448
+        y: 304
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2836,12 +2836,12 @@ TextureImporter:
       name: CP_V1.0.4_102
       rect:
         serializedVersion: 2
-        x: 479
-        y: 303
-        width: 18
-        height: 18
+        x: 480
+        y: 304
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2858,12 +2858,12 @@ TextureImporter:
       name: CP_V1.0.4_103
       rect:
         serializedVersion: 2
-        x: 511
-        y: 303
-        width: 18
-        height: 18
+        x: 512
+        y: 304
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2880,12 +2880,12 @@ TextureImporter:
       name: CP_V1.0.4_104
       rect:
         serializedVersion: 2
-        x: 15
-        y: 239
-        width: 18
-        height: 18
+        x: 16
+        y: 240
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2902,12 +2902,12 @@ TextureImporter:
       name: CP_V1.0.4_105
       rect:
         serializedVersion: 2
-        x: 47
-        y: 239
-        width: 18
-        height: 18
+        x: 48
+        y: 240
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2924,12 +2924,12 @@ TextureImporter:
       name: CP_V1.0.4_106
       rect:
         serializedVersion: 2
-        x: 79
-        y: 239
-        width: 18
-        height: 18
+        x: 80
+        y: 240
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2946,12 +2946,12 @@ TextureImporter:
       name: CP_V1.0.4_107
       rect:
         serializedVersion: 2
-        x: 111
-        y: 239
-        width: 18
-        height: 18
+        x: 112
+        y: 240
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2968,12 +2968,12 @@ TextureImporter:
       name: CP_V1.0.4_108
       rect:
         serializedVersion: 2
-        x: 143
-        y: 239
-        width: 18
-        height: 18
+        x: 144
+        y: 240
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2990,12 +2990,12 @@ TextureImporter:
       name: CP_V1.0.4_109
       rect:
         serializedVersion: 2
-        x: 223
-        y: 239
-        width: 18
-        height: 18
+        x: 224
+        y: 240
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3012,12 +3012,12 @@ TextureImporter:
       name: CP_V1.0.4_110
       rect:
         serializedVersion: 2
-        x: 255
-        y: 239
-        width: 18
-        height: 18
+        x: 256
+        y: 240
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3034,12 +3034,12 @@ TextureImporter:
       name: CP_V1.0.4_111
       rect:
         serializedVersion: 2
-        x: 287
-        y: 239
-        width: 18
-        height: 18
+        x: 288
+        y: 240
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3056,12 +3056,12 @@ TextureImporter:
       name: CP_V1.0.4_112
       rect:
         serializedVersion: 2
-        x: 321
-        y: 227
-        width: 30
-        height: 25
+        x: 322
+        y: 228
+        width: 28
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3078,12 +3078,12 @@ TextureImporter:
       name: CP_V1.0.4_113
       rect:
         serializedVersion: 2
-        x: 399
-        y: 223
-        width: 18
-        height: 18
+        x: 400
+        y: 224
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3100,12 +3100,12 @@ TextureImporter:
       name: CP_V1.0.4_114
       rect:
         serializedVersion: 2
-        x: 431
-        y: 223
-        width: 18
-        height: 18
+        x: 432
+        y: 224
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3122,12 +3122,12 @@ TextureImporter:
       name: CP_V1.0.4_115
       rect:
         serializedVersion: 2
-        x: 463
-        y: 223
-        width: 18
-        height: 18
+        x: 464
+        y: 224
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3144,12 +3144,12 @@ TextureImporter:
       name: CP_V1.0.4_116
       rect:
         serializedVersion: 2
-        x: 511
-        y: 223
-        width: 18
-        height: 18
+        x: 512
+        y: 224
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3166,12 +3166,12 @@ TextureImporter:
       name: CP_V1.0.4_117
       rect:
         serializedVersion: 2
-        x: 543
-        y: 223
-        width: 18
-        height: 18
+        x: 544
+        y: 224
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3188,12 +3188,12 @@ TextureImporter:
       name: CP_V1.0.4_118
       rect:
         serializedVersion: 2
-        x: 575
-        y: 223
-        width: 18
-        height: 18
+        x: 576
+        y: 224
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3210,12 +3210,12 @@ TextureImporter:
       name: CP_V1.0.4_119
       rect:
         serializedVersion: 2
-        x: 623
-        y: 223
-        width: 18
-        height: 18
+        x: 624
+        y: 224
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3232,12 +3232,12 @@ TextureImporter:
       name: CP_V1.0.4_120
       rect:
         serializedVersion: 2
-        x: 655
-        y: 223
-        width: 18
-        height: 18
+        x: 656
+        y: 224
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3254,12 +3254,12 @@ TextureImporter:
       name: CP_V1.0.4_121
       rect:
         serializedVersion: 2
-        x: 687
-        y: 223
-        width: 18
-        height: 18
+        x: 688
+        y: 224
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3276,12 +3276,12 @@ TextureImporter:
       name: CP_V1.0.4_122
       rect:
         serializedVersion: 2
-        x: 15
-        y: 207
-        width: 18
-        height: 18
+        x: 16
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3298,12 +3298,12 @@ TextureImporter:
       name: CP_V1.0.4_123
       rect:
         serializedVersion: 2
-        x: 143
-        y: 207
-        width: 18
-        height: 18
+        x: 144
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3320,12 +3320,12 @@ TextureImporter:
       name: CP_V1.0.4_124
       rect:
         serializedVersion: 2
-        x: 223
-        y: 207
-        width: 18
-        height: 18
+        x: 224
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3342,12 +3342,12 @@ TextureImporter:
       name: CP_V1.0.4_125
       rect:
         serializedVersion: 2
-        x: 255
-        y: 207
-        width: 18
-        height: 18
+        x: 256
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3364,12 +3364,12 @@ TextureImporter:
       name: CP_V1.0.4_126
       rect:
         serializedVersion: 2
-        x: 287
-        y: 207
-        width: 18
-        height: 18
+        x: 288
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3386,12 +3386,12 @@ TextureImporter:
       name: CP_V1.0.4_127
       rect:
         serializedVersion: 2
-        x: 324
-        y: 210
-        width: 26
-        height: 10
+        x: 325
+        y: 211
+        width: 24
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3408,12 +3408,12 @@ TextureImporter:
       name: CP_V1.0.4_128
       rect:
         serializedVersion: 2
-        x: 15
-        y: 175
-        width: 18
-        height: 18
+        x: 16
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3430,12 +3430,12 @@ TextureImporter:
       name: CP_V1.0.4_129
       rect:
         serializedVersion: 2
-        x: 47
-        y: 191
-        width: 18
-        height: 18
+        x: 48
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3452,12 +3452,12 @@ TextureImporter:
       name: CP_V1.0.4_130
       rect:
         serializedVersion: 2
-        x: 79
-        y: 191
-        width: 18
-        height: 18
+        x: 80
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3474,12 +3474,12 @@ TextureImporter:
       name: CP_V1.0.4_131
       rect:
         serializedVersion: 2
-        x: 143
-        y: 175
-        width: 18
-        height: 18
+        x: 144
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3496,12 +3496,12 @@ TextureImporter:
       name: CP_V1.0.4_132
       rect:
         serializedVersion: 2
-        x: 223
-        y: 175
-        width: 18
-        height: 18
+        x: 224
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3518,12 +3518,12 @@ TextureImporter:
       name: CP_V1.0.4_133
       rect:
         serializedVersion: 2
-        x: 255
-        y: 175
-        width: 18
-        height: 18
+        x: 256
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3540,12 +3540,12 @@ TextureImporter:
       name: CP_V1.0.4_134
       rect:
         serializedVersion: 2
-        x: 287
-        y: 175
-        width: 18
-        height: 18
+        x: 288
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3562,12 +3562,12 @@ TextureImporter:
       name: CP_V1.0.4_135
       rect:
         serializedVersion: 2
-        x: 399
-        y: 191
-        width: 18
-        height: 18
+        x: 400
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3584,12 +3584,12 @@ TextureImporter:
       name: CP_V1.0.4_136
       rect:
         serializedVersion: 2
-        x: 431
-        y: 191
-        width: 18
-        height: 18
+        x: 432
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3606,12 +3606,12 @@ TextureImporter:
       name: CP_V1.0.4_137
       rect:
         serializedVersion: 2
-        x: 463
-        y: 191
-        width: 18
-        height: 18
+        x: 464
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3628,12 +3628,12 @@ TextureImporter:
       name: CP_V1.0.4_138
       rect:
         serializedVersion: 2
-        x: 511
-        y: 191
-        width: 18
-        height: 18
+        x: 512
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3650,12 +3650,12 @@ TextureImporter:
       name: CP_V1.0.4_139
       rect:
         serializedVersion: 2
-        x: 543
-        y: 191
-        width: 18
-        height: 18
+        x: 544
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3672,12 +3672,12 @@ TextureImporter:
       name: CP_V1.0.4_140
       rect:
         serializedVersion: 2
-        x: 575
-        y: 191
-        width: 18
-        height: 18
+        x: 576
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3694,12 +3694,12 @@ TextureImporter:
       name: CP_V1.0.4_141
       rect:
         serializedVersion: 2
-        x: 623
-        y: 191
-        width: 18
-        height: 18
+        x: 624
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3716,12 +3716,12 @@ TextureImporter:
       name: CP_V1.0.4_142
       rect:
         serializedVersion: 2
-        x: 655
-        y: 191
-        width: 18
-        height: 18
+        x: 656
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3738,12 +3738,12 @@ TextureImporter:
       name: CP_V1.0.4_143
       rect:
         serializedVersion: 2
-        x: 687
-        y: 191
-        width: 18
-        height: 18
+        x: 688
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3760,12 +3760,12 @@ TextureImporter:
       name: CP_V1.0.4_144
       rect:
         serializedVersion: 2
-        x: 69
-        y: 166
-        width: 24
-        height: 8
+        x: 70
+        y: 167
+        width: 22
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3782,12 +3782,12 @@ TextureImporter:
       name: CP_V1.0.4_145
       rect:
         serializedVersion: 2
-        x: 103
-        y: 166
-        width: 7
-        height: 8
+        x: 104
+        y: 167
+        width: 5
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3804,12 +3804,12 @@ TextureImporter:
       name: CP_V1.0.4_146
       rect:
         serializedVersion: 2
-        x: 399
-        y: 159
-        width: 18
-        height: 18
+        x: 400
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3826,12 +3826,12 @@ TextureImporter:
       name: CP_V1.0.4_147
       rect:
         serializedVersion: 2
-        x: 431
-        y: 159
-        width: 18
-        height: 18
+        x: 432
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3848,12 +3848,12 @@ TextureImporter:
       name: CP_V1.0.4_148
       rect:
         serializedVersion: 2
-        x: 463
-        y: 159
-        width: 18
-        height: 18
+        x: 464
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3870,12 +3870,12 @@ TextureImporter:
       name: CP_V1.0.4_149
       rect:
         serializedVersion: 2
-        x: 511
-        y: 159
-        width: 18
-        height: 18
+        x: 512
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3892,12 +3892,12 @@ TextureImporter:
       name: CP_V1.0.4_150
       rect:
         serializedVersion: 2
-        x: 543
-        y: 159
-        width: 18
-        height: 18
+        x: 544
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3914,12 +3914,12 @@ TextureImporter:
       name: CP_V1.0.4_151
       rect:
         serializedVersion: 2
-        x: 575
-        y: 159
-        width: 18
-        height: 18
+        x: 576
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3936,12 +3936,12 @@ TextureImporter:
       name: CP_V1.0.4_152
       rect:
         serializedVersion: 2
-        x: 623
-        y: 159
-        width: 18
-        height: 18
+        x: 624
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3958,12 +3958,12 @@ TextureImporter:
       name: CP_V1.0.4_153
       rect:
         serializedVersion: 2
-        x: 655
-        y: 159
-        width: 18
-        height: 18
+        x: 656
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3980,12 +3980,12 @@ TextureImporter:
       name: CP_V1.0.4_154
       rect:
         serializedVersion: 2
-        x: 687
-        y: 159
-        width: 18
-        height: 18
+        x: 688
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4002,12 +4002,12 @@ TextureImporter:
       name: CP_V1.0.4_155
       rect:
         serializedVersion: 2
-        x: 15
-        y: 143
-        width: 18
-        height: 18
+        x: 16
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4024,12 +4024,12 @@ TextureImporter:
       name: CP_V1.0.4_156
       rect:
         serializedVersion: 2
-        x: 86
-        y: 150
-        width: 7
-        height: 8
+        x: 87
+        y: 151
+        width: 5
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4046,12 +4046,12 @@ TextureImporter:
       name: CP_V1.0.4_157
       rect:
         serializedVersion: 2
-        x: 102
-        y: 150
-        width: 7
-        height: 8
+        x: 103
+        y: 151
+        width: 5
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4068,12 +4068,12 @@ TextureImporter:
       name: CP_V1.0.4_158
       rect:
         serializedVersion: 2
-        x: 143
-        y: 143
-        width: 18
-        height: 18
+        x: 144
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4090,12 +4090,12 @@ TextureImporter:
       name: CP_V1.0.4_159
       rect:
         serializedVersion: 2
-        x: 15
-        y: 111
-        width: 18
-        height: 18
+        x: 16
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4112,12 +4112,12 @@ TextureImporter:
       name: CP_V1.0.4_160
       rect:
         serializedVersion: 2
-        x: 47
-        y: 111
-        width: 18
-        height: 18
+        x: 48
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4134,12 +4134,12 @@ TextureImporter:
       name: CP_V1.0.4_161
       rect:
         serializedVersion: 2
-        x: 79
-        y: 111
-        width: 18
-        height: 18
+        x: 80
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4156,12 +4156,12 @@ TextureImporter:
       name: CP_V1.0.4_162
       rect:
         serializedVersion: 2
-        x: 111
-        y: 111
-        width: 18
-        height: 18
+        x: 112
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4178,12 +4178,12 @@ TextureImporter:
       name: CP_V1.0.4_163
       rect:
         serializedVersion: 2
-        x: 143
-        y: 111
-        width: 18
-        height: 18
+        x: 144
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4200,7 +4200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c436331d8df05014d9e22be9d468b1a9
     internalID: 0
     vertices: []
     indices: 
@@ -4208,7 +4208,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       CP_V1.0.4_0: 6669971175496074141
       CP_V1.0.4_1: 2776858760641423503

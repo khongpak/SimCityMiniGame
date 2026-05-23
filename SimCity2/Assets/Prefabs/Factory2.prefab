@@ -80,7 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -7442772181592641934, guid: c3fa028fe0289f549a59bb1dd9cf202c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -105,3 +105,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Building
   incomePerTick: 5
+  constructionCost: 0
