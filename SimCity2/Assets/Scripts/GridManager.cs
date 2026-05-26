@@ -36,28 +36,39 @@ public class GridManager : MonoBehaviour
 
     void Update()
     {
+        // 🔥 [เพิ่มเข้ามาใหม่: ดักจับปุ่ม Esc เพื่อยกเลิกการวางตึก]
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            // ตั้งค่าให้อินเด็กซ์ตึกที่เลือกกลับไปเป็นค่าว่าง (เช่น -1) เพื่อบอกว่าตอนนี้ไม่ได้เลือกตึกอะไรอยู่
+            selectedBuildingIndex = -1; 
+            Debug.Log("ยกเลิกโหมดสร้างตึก เรียบร้อยค่ะ");
+        }
+
         UpdateHighlight();
 
         // คลิกซ้ายเพื่อวางตึก
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        if (selectedBuildingIndex != -1 && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
-
-            if (float.IsNaN(mouseScreenPos.x) || float.IsNaN(mouseScreenPos.y))
+            if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
             {
-                return;
-            }
+                Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
 
-            if (Camera.main != null)
-            {
-                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
-                
-                // ชดเชยพิกัดด้วย Offset ก่อนคำนวณตำแหน่งตาราง
-                Vector2Int gridPosition = GetGridPosition(new Vector3(mousePosition.x - gridOffset.x, mousePosition.y - gridOffset.y, 0));
-
-                if (IsValidPosition(gridPosition))
+                if (float.IsNaN(mouseScreenPos.x) || float.IsNaN(mouseScreenPos.y))
                 {
-                    PlaceBuilding(gridPosition);
+                    return;
+                }
+
+                if (Camera.main != null)
+                {
+                    Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
+                    
+                    // ชดเชยพิกัดด้วย Offset ก่อนคำนวณตำแหน่งตาราง
+                    Vector2Int gridPosition = GetGridPosition(new Vector3(mousePosition.x - gridOffset.x, mousePosition.y - gridOffset.y, 0));
+
+                    if (IsValidPosition(gridPosition))
+                    {
+                        PlaceBuilding(gridPosition);
+                    }
                 }
             }
         }
@@ -92,6 +103,12 @@ public class GridManager : MonoBehaviour
         if (Camera.main == null || highlightInstance == null) return;
 
         Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
+
+        if (selectedBuildingIndex == -1)
+        {
+            highlightInstance.SetActive(false);
+            return;
+        }
         
         if (float.IsNaN(mouseScreenPos.x) || float.IsNaN(mouseScreenPos.y))
         {
