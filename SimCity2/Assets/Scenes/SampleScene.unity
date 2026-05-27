@@ -8923,7 +8923,7 @@ MonoBehaviour:
     cost: 50
     incomePerTick: 20
   - name: Road
-    prefab: {fileID: 5062359443583960304, guid: fe8c0a686d492c041acd51899dd527b0, type: 3}
+    prefab: {fileID: 5258389872105041533, guid: 8191a7336261ba54d8cbc32a1574257e, type: 3}
     cost: 5
     incomePerTick: 0
   highlightPrefab: {fileID: 5077664610662642328, guid: 1d51b0048abfac947814e62f64051b00, type: 3}
