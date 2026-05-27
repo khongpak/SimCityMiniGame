@@ -8927,6 +8927,7 @@ MonoBehaviour:
     cost: 5
     incomePerTick: 0
   highlightPrefab: {fileID: 5077664610662642328, guid: 1d51b0048abfac947814e62f64051b00, type: 3}
+  targetTilemap: {fileID: 857509414}
 --- !u!4 &1320572216
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps; // 🔥 [เพิ่มเข้ามาใหม่: จำเป็นต้องใช้เพื่อดักจับข้อมูล Tilemap ค่ะ]
 
 public class GridManager : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class GridManager : MonoBehaviour
     public float cellSize = 1.0f;
 
     [Header("Building Settings")]
-    public BuildingData[] availableBuildings; // รายการข้อมูลตึกทั้งหมด
-    private int selectedBuildingIndex = 0;   // เก็บสถิติว่าตอนนี้เลือกตึกตัวไหนอยู่
+    public BuildingData[] availableBuildings; 
+    private int selectedBuildingIndex = 0;   
 
+    [Header("References")]
     public GameObject highlightPrefab;
     private GameObject highlightInstance;
+    // 🔥 [เพิ่มเข้ามาใหม่: กล่องสำหรับลากวัตถุ Tilemap ในฉากมาใส่เพื่อใช้เช็คพื้นผิว]
+    public Tilemap targetTilemap; 
 
     public static event Action<int> OnBuildingPlaced;
 
@@ -23,8 +27,6 @@ public class GridManager : MonoBehaviour
     void Start()
     {
         gridArray = new GameObject[width, height];
-        
-        // คำนวณ Offset ให้ตารางอยู่กึ่งกลางโลกพอดี
         gridOffset = new Vector2(-(width / 2f) * cellSize, -(height / 2f) * cellSize);
 
         if (highlightPrefab != null)
@@ -36,39 +38,31 @@ public class GridManager : MonoBehaviour
 
     void Update()
     {
-        // 🔥 [เพิ่มเข้ามาใหม่: ดักจับปุ่ม Esc เพื่อยกเลิกการวางตึก]
+        UpdateHighlight();
+
+        // กดปุ่ม Esc เพื่อยกเลิกการวางตึก
         if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            // ตั้งค่าให้อินเด็กซ์ตึกที่เลือกกลับไปเป็นค่าว่าง (เช่น -1) เพื่อบอกว่าตอนนี้ไม่ได้เลือกตึกอะไรอยู่
             selectedBuildingIndex = -1; 
             Debug.Log("ยกเลิกโหมดสร้างตึก เรียบร้อยค่ะ");
         }
 
-        UpdateHighlight();
-
-        // คลิกซ้ายเพื่อวางตึก
+        // คลิกซ้ายเพื่อวางตึก (เพิ่มเงื่อนไขตรวจสอบพื้นที่)
         if (selectedBuildingIndex != -1 && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
-            if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+            Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
+
+            if (float.IsNaN(mouseScreenPos.x) || float.IsNaN(mouseScreenPos.y)) return;
+
+            if (Camera.main != null)
             {
-                Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
+                Vector2Int gridPosition = GetGridPosition(new Vector3(mousePosition.x - gridOffset.x, mousePosition.y - gridOffset.y, 0));
 
-                if (float.IsNaN(mouseScreenPos.x) || float.IsNaN(mouseScreenPos.y))
+                // 🔥 [แก้ไขจุดนี้]: ต้องผ่านทั้งเงื่อนไข IsValidPosition (ช่องว่าง) และเป็นพื้นดิน (IsWalkableTerrain) ถึงจะยอมให้สร้าง
+                if (IsValidPosition(gridPosition) && IsWalkableTerrain(gridPosition))
                 {
-                    return;
-                }
-
-                if (Camera.main != null)
-                {
-                    Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
-                    
-                    // ชดเชยพิกัดด้วย Offset ก่อนคำนวณตำแหน่งตาราง
-                    Vector2Int gridPosition = GetGridPosition(new Vector3(mousePosition.x - gridOffset.x, mousePosition.y - gridOffset.y, 0));
-
-                    if (IsValidPosition(gridPosition))
-                    {
-                        PlaceBuilding(gridPosition);
-                    }
+                    PlaceBuilding(gridPosition);
                 }
             }
         }
@@ -85,10 +79,8 @@ public class GridManager : MonoBehaviour
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
                 Vector2Int gridPosition = GetGridPosition(new Vector3(mousePosition.x - gridOffset.x, mousePosition.y - gridOffset.y, 0));
 
-                // ตรวจสอบว่าพิกัดอยู่ในตารางหรือไม่
                 if (gridPosition.x >= 0 && gridPosition.x < width && gridPosition.y >= 0 && gridPosition.y < height)
                 {
-                    // ตรวจสอบว่ามีตึกให้ทุบไหม (ในอาเรย์ต้องไม่ว่าง)
                     if (gridArray[gridPosition.x, gridPosition.y] != null)
                     {
                         DemolishBuilding(gridPosition);
@@ -101,14 +93,13 @@ public class GridManager : MonoBehaviour
     void UpdateHighlight()
     {
         if (Camera.main == null || highlightInstance == null) return;
-
-        Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
-
         if (selectedBuildingIndex == -1)
         {
             highlightInstance.SetActive(false);
             return;
         }
+
+        Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
         
         if (float.IsNaN(mouseScreenPos.x) || float.IsNaN(mouseScreenPos.y))
         {
@@ -116,7 +107,6 @@ public class GridManager : MonoBehaviour
             return;
         }
 
-        // ตรวจสอบว่าเมาส์อยู่ในขอบเขตหน้าจอหรือไม่
         if (mouseScreenPos.x < 0 || mouseScreenPos.x > Screen.width || 
             mouseScreenPos.y < 0 || mouseScreenPos.y > Screen.height)
         {
@@ -125,15 +115,12 @@ public class GridManager : MonoBehaviour
         }
 
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, Camera.main.nearClipPlane));
-        
-        // ชดเชยพิกัดด้วย Offset
         Vector2Int gridPosition = GetGridPosition(new Vector3(mousePosition.x - gridOffset.x, mousePosition.y - gridOffset.y, 0));
 
         if (gridPosition.x >= 0 && gridPosition.x < width && gridPosition.y >= 0 && gridPosition.y < height)
         {
             highlightInstance.SetActive(true);
             
-            // คำนวณตำแหน่งแสดงผลของ Highlight ให้ตรงล็อกตาราง
             Vector3 cellCenter = new Vector3(
                 gridPosition.x * cellSize + (cellSize / 2) + gridOffset.x, 
                 gridPosition.y * cellSize + (cellSize / 2) + gridOffset.y, 
@@ -141,7 +128,6 @@ public class GridManager : MonoBehaviour
             );
             highlightInstance.transform.position = cellCenter;
 
-            // ระบบเงาตึกอัจฉริยะ (Smart Ghost Preview)
             if (availableBuildings != null && availableBuildings.Length > 0)
             {
                 BuildingData currentData = availableBuildings[selectedBuildingIndex];
@@ -152,21 +138,22 @@ public class GridManager : MonoBehaviour
 
                 if (highlightSprite != null && prefabSprite != null)
                 {
-                    highlightSprite.sprite = prefabSprite.sprite; // เปลี่ยนรูปตามตึกที่เลือก
+                    highlightSprite.sprite = prefabSprite.sprite; 
                     
-                    // ดึง ResourceManager มาเช็คเงิน ณ เฟรมนั้นๆ
                     ResourceManager rm = FindFirstObjectByType<ResourceManager>();
                     
-                    // ตรวจสอบเงื่อนไข: ช่องต้องว่าง และ เงินต้องพอ
-                    bool canPlace = IsValidPosition(gridPosition) && (rm != null && rm.gold >= currentData.cost);
+                    // 🔥 [แก้ไขจุดนี้]: เปลี่ยนสีพรีวิวเป็นเขียวเมื่อช่องว่าง เงินพอ และ "ไม่ใช่พื้นน้ำ" เท่านั้น
+                    bool canPlace = IsValidPosition(gridPosition) && 
+                                    IsWalkableTerrain(gridPosition) && 
+                                    (rm != null && rm.gold >= currentData.cost);
                     
                     if (canPlace)
                     {
-                        highlightSprite.color = new Color(0.5f, 1f, 0.5f, 0.5f); // สีเขียวโปร่งแสง
+                        highlightSprite.color = new Color(0.5f, 1f, 0.5f, 0.5f); // สีเขียวโปร่งแสงผ่านฉลุย
                     }
                     else
                     {
-                        highlightSprite.color = new Color(1f, 0.5f, 0.5f, 0.5f); // สีแดงโปร่งแสง
+                        highlightSprite.color = new Color(1f, 0.5f, 0.5f, 0.5f); // สีแดงเตือนภัย (ห้ามวาง)
                     }
                 }
             }
@@ -193,6 +180,33 @@ public class GridManager : MonoBehaviour
         return false;
     }
 
+    // 🔥 [ฟังก์ชันเพิ่มเข้ามาใหม่สำหรับระบบสแกนตรวจสอบประเภทพื้นผิวบน Tilemap]
+    bool IsWalkableTerrain(Vector2Int gridPos)
+    {
+        // ถ้าคุณเพชรยังไม่ได้ลากวัตถุ Tilemap มาใส่ในช่องดักจับ ให้ระบบยอมให้วางของไปก่อนเพื่อป้องกันค้าง
+        if (targetTilemap == null) return true;
+
+        // แปลงพิกัด Grid สู่ระบบพิกัดตําแหน่ง Cell ของตัว Tilemap ตรง ๆ
+        Vector3Int tilemapCellPos = new Vector3Int(gridPos.x - (width / 2), gridPos.y - (height / 2), 0);
+
+        // วิ่งไปเช็คแผ่นกระเบื้อง ณ พิกัดนั้น ๆ
+        TileBase currentTile = targetTilemap.GetTile(tilemapCellPos);
+
+        // ถ้าไม่มีแผ่นกระเบื้องวางอยู่เลย (เช่น นอกขอบแมพ) ห้ามวางตึกเด็ดขาดค่ะ
+        if (currentTile == null) return false;
+
+        // สแกนตรวจสอบชื่อของสไปรต์กระเบื้องชิ้นนั้น
+        string tileName = currentTile.name.ToLower();
+
+        // 🌊 [กฎเหล็ก]: ถ้าชื่อไฟล์มีคำว่าน้ำ (water) หรือ ทะเล (sea) ให้ส่งค่ากลับเป็น False (สร้างตึกไม่ได้)
+        if (tileName.Contains("water") || tileName.Contains("sea") || tileName.Contains("river"))
+        {
+            return false; 
+        }
+
+        return true; // ถ้าไม่ใช่พื้นน้ำ ยอมให้ผ่านค่ะ
+    }
+
     void PlaceBuilding(Vector2Int pos)
     {
         BuildingData currentData = availableBuildings[selectedBuildingIndex];
@@ -206,20 +220,16 @@ public class GridManager : MonoBehaviour
                 0
             );
 
-            // สร้างตึกจาก Prefab ที่ระบุไว้
             GameObject newBuilding = Instantiate(currentData.prefab, worldPosition, Quaternion.identity);
             
-            // ส่งค่าต่างๆ ไปให้กับสคริปต์ Building ที่อยู่ในตึกผ่าน Setup
             if (newBuilding.TryGetComponent(out Building b))
             {
                 b.Setup(currentData.incomePerTick, currentData.cost, pos, this);
             }
 
-            // สั่งหักเงินและบันทึกเข้า Array
             OnBuildingPlaced?.Invoke(currentData.cost);
             gridArray[pos.x, pos.y] = newBuilding;
 
-            // แจ้งเตือนช่องรอบข้างให้ตรวจสอบถนนทันที
             NotifyNeighbors(pos);
         }
         else
@@ -240,7 +250,6 @@ public class GridManager : MonoBehaviour
 
         if (buildingToDestroy.TryGetComponent(out Building b))
         {
-            // คำนวณคืนเงิน 50%
             refundAmount = b.constructionCost / 2; 
         }
 
@@ -250,19 +259,16 @@ public class GridManager : MonoBehaviour
             rm.RefundGold(refundAmount);
         }
 
-        // ลบวัตถุออกจากฉากเกมและเคลียร์ Array
         Destroy(buildingToDestroy);
         gridArray[pos.x, pos.y] = null;
         
         Debug.Log($"ทุบตึกที่พิกัด {pos} เรียบร้อย ได้คืน {refundAmount} Gold");
 
-        // แจ้งเตือนช่องรอบข้างให้ตรวจสอบสถานะถนนใหม่หลังจากทุบเสร็จ
         NotifyNeighbors(pos);
     }
 
     public GameObject GetBuildingAt(Vector2Int pos)
     {
-        // ตรวจสอบว่าพิกัดที่ส่งมาไม่หลุดขอบ Array
         if (pos.x >= 0 && pos.x < width && pos.y >= 0 && pos.y < height)
         {
             return gridArray[pos.x, pos.y];
@@ -270,15 +276,14 @@ public class GridManager : MonoBehaviour
         return null;
     }
 
-    // ฟังก์ชันกระจายข่าวบอกช่องรอบทิศทาง (บน ล่าง ซ้าย ขวา)
     private void NotifyNeighbors(Vector2Int centerPos)
     {
         Vector2Int[] neighbors = new Vector2Int[]
         {
-            new Vector2Int(centerPos.x + 1, centerPos.y), // ขวา
-            new Vector2Int(centerPos.x - 1, centerPos.y), // ซ้าย
-            new Vector2Int(centerPos.x, centerPos.y + 1), // บน
-            new Vector2Int(centerPos.x, centerPos.y - 1)  // ล่าง
+            new Vector2Int(centerPos.x + 1, centerPos.y), 
+            new Vector2Int(centerPos.x - 1, centerPos.y), 
+            new Vector2Int(centerPos.x, centerPos.y + 1), 
+            new Vector2Int(centerPos.x, centerPos.y - 1)  
         };
 
         foreach (var p in neighbors)
@@ -286,7 +291,6 @@ public class GridManager : MonoBehaviour
             GameObject obj = GetBuildingAt(p);
             if (obj != null && obj.TryGetComponent(out Building b))
             {
-                // สั่งให้ตึกข้างเคียงอัปเดตสถานะการเชื่อมต่อถนน
                 b.CheckRoadConnection(); 
             }
         }
