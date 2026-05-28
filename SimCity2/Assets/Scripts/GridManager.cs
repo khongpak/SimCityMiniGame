@@ -141,11 +141,19 @@ public class GridManager : MonoBehaviour
                     highlightSprite.sprite = prefabSprite.sprite; 
                     
                     ResourceManager rm = FindFirstObjectByType<ResourceManager>();
+
+                    bool hasPower = true;
+                    if (currentData.powerGeneratedOrConsumed < 0 && rm != null)
+                    {
+                        // ถ้าเป็นตึกที่กินไฟ ให้เช็คว่าไฟส่วนกลางเหลือพอไหม
+                        hasPower = rm.HasEnoughPower(currentData.powerGeneratedOrConsumed);
+                    }
                     
                     // 🔥 [แก้ไขจุดนี้]: เปลี่ยนสีพรีวิวเป็นเขียวเมื่อช่องว่าง เงินพอ และ "ไม่ใช่พื้นน้ำ" เท่านั้น
                     bool canPlace = IsValidPosition(gridPosition) && 
                                     IsWalkableTerrain(gridPosition) && 
-                                    (rm != null && rm.gold >= currentData.cost);
+                                    (rm != null && rm.gold >= currentData.cost)&&
+                                    hasPower;
                     
                     if (canPlace)
                     {
@@ -207,12 +215,20 @@ public class GridManager : MonoBehaviour
         return true; // ถ้าไม่ใช่พื้นน้ำ ยอมให้ผ่านค่ะ
     }
 
+    
     void PlaceBuilding(Vector2Int pos)
     {
         BuildingData currentData = availableBuildings[selectedBuildingIndex];
         ResourceManager rm = FindFirstObjectByType<ResourceManager>();
         
-        if (rm != null && rm.gold >= currentData.cost)
+        // ตรวจสอบทั้งเงิน และตรวจสอบไฟฟ้า (ถ้าเป็นตึกกินไฟ)
+        bool canPlace = rm != null && rm.gold >= currentData.cost;
+        if (currentData.powerGeneratedOrConsumed < 0 && rm != null)
+        {
+            canPlace = canPlace && rm.HasEnoughPower(currentData.powerGeneratedOrConsumed);
+        }
+
+        if (canPlace)
         {
             Vector3 worldPosition = new Vector3(
                 pos.x * cellSize + (cellSize / 2) + gridOffset.x, 
@@ -222,9 +238,16 @@ public class GridManager : MonoBehaviour
 
             GameObject newBuilding = Instantiate(currentData.prefab, worldPosition, Quaternion.identity);
             
+            // 🔥 [ส่งค่า powerGeneratedOrConsumed เข้าไปในตัวตึกด้วยค่ะ]
             if (newBuilding.TryGetComponent(out Building b))
             {
-                b.Setup(currentData.incomePerTick, currentData.cost, pos, this);
+                b.Setup(currentData.incomePerTick, currentData.cost, currentData.powerGeneratedOrConsumed, pos, this);
+            }
+
+            // 🔥 [สั่งอัปเดตระบบไฟฟ้าเข้าสู่ ResourceManager ส่วนกลาง]
+            if (rm != null)
+            {
+                rm.UpdatePowerGrid(currentData.powerGeneratedOrConsumed);
             }
 
             OnBuildingPlaced?.Invoke(currentData.cost);
@@ -234,7 +257,7 @@ public class GridManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("เงินไม่พอสร้าง " + currentData.name);
+            Debug.Log("เงิน หรือ ระบบไฟฟ้าไม่เพียงพอสำหรับสร้าง " + currentData.name);
         }
     }
 
@@ -243,26 +266,30 @@ public class GridManager : MonoBehaviour
         selectedBuildingIndex = index;
     }
 
+    // --- เพิ่มเติมในฟังก์ชัน DemolishBuilding() ---
     void DemolishBuilding(Vector2Int pos)
     {
         GameObject buildingToDestroy = gridArray[pos.x, pos.y];
         int refundAmount = 0; 
+        int powerValue = 0; // 🔥 เพิ่มตัวแปรจำค่าไฟของตึกที่จะทุบ
 
         if (buildingToDestroy.TryGetComponent(out Building b))
         {
             refundAmount = b.constructionCost / 2; 
+            powerValue = b.powerGeneratedOrConsumed; // 🔥 ดึงค่าไฟออกมา
         }
 
         ResourceManager rm = FindFirstObjectByType<ResourceManager>();
         if (rm != null)
         {
             rm.RefundGold(refundAmount);
+            rm.ReleasePower(powerValue); // 🔥 [คืนค่าไฟฟ้าเข้าสู่ระบบส่วนกลาง]
         }
 
         Destroy(buildingToDestroy);
         gridArray[pos.x, pos.y] = null;
         
-        Debug.Log($"ทุบตึกที่พิกัด {pos} เรียบร้อย ได้คืน {refundAmount} Gold");
+        Debug.Log($"ทุบตึกที่พิกัด {pos} เรียบร้อย ได้คืน {refundAmount} Gold และอัปเดตระบบไฟ");
 
         NotifyNeighbors(pos);
     }

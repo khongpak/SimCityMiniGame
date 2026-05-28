@@ -5,11 +5,14 @@ public class Building : MonoBehaviour
     [Header("Building Income Settings")]
     public int incomePerTick = 10;
     public int constructionCost = 50;
+    
+    // 🔥 [เพิ่มเข้ามาใหม่]: ตัวแปรจำค่าพลังงานไฟฟ้าของตึกนี้ (บวก = ผลิต, ลบ = ใช้ไฟ)
+    [Header("Power Settings")]
+    public int powerGeneratedOrConsumed = 0; 
 
     [Header("Status")]
     public bool isConnectedToRoad = false;
 
-    // 🔥 [เพิ่มเข้ามาใหม่]: กล่องสำหรับจำพิกัดของตัวเอง และจำว่าใครเป็นคนสร้าง (GridManager)
     [HideInInspector] public Vector2Int myGridPos;
     [HideInInspector] public GridManager gridManager;
 
@@ -23,43 +26,64 @@ public class Building : MonoBehaviour
         TimeManager.OnDayPassed -= HandleDayPassed;
     }
 
-    // 🔥 [แก้ไขและอัปเดตใหม่]: ฟังก์ชันที่ GridManager จะเรียกใช้ตอนเสกตึกนี้ขึ้นมาในโลก
-    public void Setup(int income, int cost, Vector2Int pos, GridManager manager)
+    // 🔥 [อัปเดตฟังก์ชัน Setup ให้รับค่าพลังงานไฟฟ้าเข้ามาด้วยค่ะ]
+    public void Setup(int income, int cost, int power, Vector2Int pos, GridManager manager)
     {
         incomePerTick = income;
         constructionCost = cost;
-        
-        // 🔥 จำพิกัดและจำตัว GridManager ไว้ใช้สแกนหาเพื่อนบ้าน
+        powerGeneratedOrConsumed = power; // จำค่าพลังงานไฟฟ้า
         myGridPos = pos;
         gridManager = manager;
 
-        // วางตึกเสร็จปุ๊บ ให้รันระบบเช็คสถานะถนนของตัวเองทันที 1 รอบค่ะ
         CheckRoadConnection();
     }
 
     void HandleDayPassed()
     {
-        // เงื่อนไขในการผลิตเงิน: ถ้าเป็น "ถนน" เอง หรือถ้าเป็น "บ้านที่เชื่อมต่อกับถนนสำเร็จ" ถึงจะยอมให้ผลิตเงินค่ะ
-        if (gameObject.name.Contains("Road") || isConnectedToRoad)
+        ResourceManager rm = FindFirstObjectByType<ResourceManager>();
+        
+        // เช็คสถานะไฟฟ้าส่วนกลางก่อนเบื้องต้น (ถ้าไฟฟ้ารวมที่ใช้ ดันมากกว่า ไฟฟ้าที่มี แสดงว่าไฟตก/ไฟดับทั้งเมือง)
+        bool isPowerOvertaxed = false;
+        if (rm != null)
         {
-            ResourceManager rm = FindFirstObjectByType<ResourceManager>();
-            if (rm != null)
+            isPowerOvertaxed = rm.currentPowerUsed > rm.maxPowerAvailable;
+        }
+
+        // เงื่อนไขในการผลิตเงิน:
+        // 1. ตัวเองเป็นถนน (ถนนผลิตเงินได้เสมอถ้าตั้งค่าไว้ ไม่ใช้ไฟฟ้า)
+        // 2. เป็นบ้านที่เชื่อมถนนสำเร็จ AND (เป็นตึกที่ไม่ได้ใช้ไฟ หรือ ระบบไฟส่วนกลางใช้งานได้ปกติ)
+        bool canProduceIncome = false;
+
+        if (gameObject.name.Contains("Road"))
+        {
+            canProduceIncome = true;
+        }
+        else if (isConnectedToRoad)
+        {
+            // ถ้าตึกนี้ต้องการไฟ (ค่าพลังงานเป็นลบ) แต่ตอนนี้น้ำไฟเข้าไม่ถึง/ไฟตก เมืองโหลดเกินพิกัด จะไม่ผลิตเงินค่ะ
+            if (powerGeneratedOrConsumed < 0 && isPowerOvertaxed)
             {
-                rm.AddGold(incomePerTick);
-                Debug.Log(gameObject.name + " ผลิตรายได้เรียบร้อยแล้วค่ะ: +" + incomePerTick + " Gold");
+                Debug.LogWarning(gameObject.name + " ไฟดับ! ไม่สามารถผลิตรายได้ได้ในรอบนี้ค่ะ");
+                canProduceIncome = false;
             }
+            else
+            {
+                canProduceIncome = true;
+            }
+        }
+
+        if (canProduceIncome && rm != null)
+        {
+            rm.AddGold(incomePerTick);
+            Debug.Log(gameObject.name + " ผลิตรายได้เรียบร้อยแล้วค่ะ: +" + incomePerTick + " Gold");
         }
     }
 
-    // ฟังก์ชันตรวจสอบสิ่งปลูกสร้างรอบตัว 4 ทิศ เพื่ออัปเดตสถานะการเชื่อมต่อถนน
     public void CheckRoadConnection()
     {
-        // ถ้าเป็นวัตถุประเภทถนนอยู่แล้ว ไม่จำเป็นต้องเช็คหาถนนอีกรอบค่ะ
         if (gameObject.name.Contains("Road"))
         {
             isConnectedToRoad = true;
-            
-            // 🔥 [พิเศษสำหรับระบบถนน]: ถ้าตัวฉันเองเป็นถนน และพิกัดพร้อมแล้ว ให้สั่งตัวคุมสไปรต์เปลี่ยนรูปร่างทันที!
             if (TryGetComponent(out RoadController roadCtrl))
             {
                 roadCtrl.UpdateRoadSprite();
@@ -67,15 +91,14 @@ public class Building : MonoBehaviour
             return;
         }
 
-        // --- ส่วนของบ้านธรรมดา เช็คหาถนนรอบตัว 4 ทิศเหมือนเดิมค่ะ ---
         if (gridManager == null) return;
 
         Vector2Int[] neighbors = new Vector2Int[]
         {
-            new Vector2Int(myGridPos.x + 1, myGridPos.y), // ขวา
-            new Vector2Int(myGridPos.x - 1, myGridPos.y), // ซ้าย
-            new Vector2Int(myGridPos.x, myGridPos.y + 1), // บน
-            new Vector2Int(myGridPos.x, myGridPos.y - 1)  // ล่าง
+            new Vector2Int(myGridPos.x + 1, myGridPos.y),
+            new Vector2Int(myGridPos.x - 1, myGridPos.y),
+            new Vector2Int(myGridPos.x, myGridPos.y + 1),
+            new Vector2Int(myGridPos.x, myGridPos.y - 1)
         };
 
         isConnectedToRoad = false;
@@ -85,7 +108,6 @@ public class Building : MonoBehaviour
             GameObject neighborObj = gridManager.GetBuildingAt(p);
             if (neighborObj != null)
             {
-                // ถ้าสแกนเจอว่ามีบล็อกใดบล็อกหนึ่งรอบตัวมีชื่อขึ้นต้นหรือประกอบด้วยคำว่า "Road"
                 if (neighborObj.name.Contains("Road"))
                 {
                     isConnectedToRoad = true;
